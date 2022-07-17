@@ -1,0 +1,123 @@
+.dropdown {
+    position: relative;
+
+    &__menu {
+        position: absolute;
+        top: calc(100%);
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 320px;
+        //max-height: 300px;
+        background-color: $light-grayish-blue;
+
+        transition: opacity .2s, transform .2s;
+        pointer-events: none;
+        border-radius: 12px;
+        opacity: 0;
+    }
+
+    &__btn {
+        padding: .5rem 0;
+
+        img {
+            transition: filter .2s;
+        }
+
+        &:hover > img{
+            filter: brightness(0) invert(0);
+        }
+
+        &::after {
+            content: '0';
+            position: absolute;
+            top: .1rem;
+            right: -50%;
+
+            padding: 0 .4rem;
+            background-color: $primary-orange;
+
+            font-size: 11px;
+            font-weight: 700;
+            color: $white;
+
+            border-radius: 8px;
+            opacity: 0;
+        }
+    }
+
+    &[active] > &__btn {
+        filter: brightness(0) invert(0);
+
+        & + .dropdown__menu {
+            opacity: 1;
+            transform: translate(-50%, 1rem);
+            pointer-events: auto;
+        }
+    }
+
+    &__title {
+        padding: 1rem 1.5rem;
+
+        border-bottom: 1px solid $grayish-blue;
+    }
+
+    &__details {
+        max-height: 200px;
+        padding: 1rem 1.5rem 0 1.5rem;
+
+        overflow-y: auto;
+    }
+
+    &__product {
+        display: grid;
+        grid-template-columns: 1.8fr 2fr 5fr .5fr;
+        align-items: center;
+        grid-column-gap: .5rem;
+        padding-bottom: 1rem;
+
+        h5 {
+            grid-column: 2 / span 2;
+        }
+
+        p {
+            font-size: 13px;         
+        }
+    }
+
+    &__img {
+        grid-row: 1 / span 2;
+ 
+        height: auto;
+        width: 100%;
+
+        border-radius: 4px;
+    }
+
+    &__delete {
+        grid-row: 1 / span 2;
+        grid-column: 4 / span 1;
+
+        img {
+            height: auto;
+            width: 100%;
+        }     
+    }
+
+    &__total {
+        color: #000;
+        font-weight: 700;
+    }
+
+    &__checkout {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    &__empty {
+        padding: 4rem 0;
+
+        text-align: center;
+        font-weight: 700;
+    }
+}

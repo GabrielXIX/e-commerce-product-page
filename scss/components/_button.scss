@@ -1,0 +1,31 @@
+.primary-btn {
+    grid-gap: 1rem;
+    justify-content: center;
+
+    width: 100%;
+    padding: 1rem;
+    background-color: $primary-orange;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: $white;
+
+    transition: background-color .2s;
+    box-shadow: 0 16px 16px 1px rgba($primary-orange, 0.2);
+    border-radius: 12px;
+
+    img {
+        width: 18px;
+
+        filter: brightness(0) invert(1);
+    }
+
+    &:hover {
+        background-color: rgba($primary-orange, .5);
+    }
+
+    &--cart {
+
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,131 @@
+.product {
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8rem;
+
+    margin: 5rem auto;
+    max-width: 70vw;
+
+    &__img {
+        margin-bottom: 1.5rem;
+
+        border-radius: 24px;
+
+        img {
+            border-radius: 24px;
+        }
+    }
+
+
+    &__thumbnails {
+        display: flex;
+        grid-gap: 1.5rem;
+        
+        width: 100%;
+
+        img {
+            border-radius: 12px;
+        }
+    }
+
+    &__thumbnail {
+        position: relative;
+        border-radius: 12px;
+
+        &::after { 
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+            background-color: $light-grayish-blue;
+
+            transition: opacity .2s;
+
+            border-radius: 12px;
+            opacity: 0;
+        }
+
+        &:not([active]):hover::after {
+            opacity: .5;
+        } 
+
+        &[active] {
+            outline: 3px solid $primary-orange;
+
+            &::after {
+                opacity: .7;
+            } 
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 2rem
+    }
+
+    &__header > h3 {
+        margin-bottom: 1rem;
+    }
+
+    &__price {
+
+        span {
+            margin-left: .8rem;
+            padding: .2rem;
+            background-color: $primary-pale-orange;
+
+            font-weight: 700;
+            color: $primary-orange;
+
+            border-radius: 6px;
+        }
+
+        p {        
+            margin-top: .4rem;
+
+            text-decoration: line-through;
+            font-weight: 700;
+            color: $grayish-blue;
+        }
+    }
+
+    &__adding {
+        grid-gap: 1rem;
+    }
+
+    &__quantity {
+        grid-gap: 2rem;
+
+        padding: .45rem .8rem;
+        background-color: $light-grayish-blue;
+
+        border-radius: 12px;
+
+        button {
+            padding: .5rem;
+
+            color: $primary-orange;
+            font-weight: 700;
+
+            transition: color .2s;
+
+            &:hover {
+                color: rgba($primary-orange, 0.5);
+            }
+        }
+
+        p {
+            width: 20px;
+
+            text-align: center;
+            color: #000;
+            font-weight: 700;
+        }
+    }
+}

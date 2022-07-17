@@ -4,16 +4,135 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!--Links-->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!--Script-->
+  <script src="./js/main.js" defer></script>
   
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
 
+  <header class="header header--border flex-align-center">
+
+    <div class="header__item flex-align-center">
+
+      <div>
+        <a class="header__link" href="#"><img src="./images/logo.svg" alt="sneakers-logo"></a>
+      </div>
+
+      <nav>
+        <ul role="list" class="header__nav flex-align-center">
+          <li><a href="#" class="header__link">Collections</a><span></span></li>
+          <li><a href="#" class="header__link">Men</a><span></span></li>
+          <li><a href="#" class="header__link">Women</a><span></span></li>
+          <li><a href="#" class="header__link">About</a><span></span></li>
+          <li><a href="#" class="header__link">Contact</a><span></span></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="header__item flex-align-center">
+      
+      <div class="dropdown" data-dropdown>
+
+        <button class="dropdown__btn" data-dropdown-btn><img src="./images/icon-cart.svg" alt="icon-cart" data-dropdown-btn></button>
+
+        <div class="dropdown__menu" data-dropdown-menu>
+
+          <h4 class="dropdown__title">Cart</h4>
+
+          <p class="dropdown__empty">Your cart is empty.</p>
+
+          <!-- <div class="dropdown__details">
+            <div class="dropdown__product">
+              <img class="dropdown__img" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+              <h5>Fall Limitied Edition Sneakers</h5>
+              <button class="dropdown__delete"><img src="./images/icon-delete.svg" alt="icon-delete"></button>
+              <p>$125 x 3</p>
+              <p class="dropdown__total">$375.00</p>      
+            </div>          
+          </div>   
+          
+          <div class="dropdown__checkout">
+            <button class="primary-btn primary-btn--cart">Checkout</button>
+          </div> -->
+
+        </div>      
+      </div>
+
+      <button class="header__profile">
+        <img src="./images/image-avatar.png" alt="image-avatar">
+      </button>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="product">
+
+      <div>
+        <div class="product__img" data-product-img>
+          <img src="./images/image-product-1.jpg" alt="image-product-1">
+        </div>
+        <div class="product__thumbnails" data-thumbnail-container>
+          <button class="product__thumbnail" data-thumbnail active><img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail"></button>
+          <button class="product__thumbnail" data-thumbnail><img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail"></button>
+          <button class="product__thumbnail" data-thumbnail><img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail"></button>
+          <button class="product__thumbnail" data-thumbnail><img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail"></button>
+        </div>
+      </div>
+
+      <div class="product__details">
+        <header class="product__header">
+          <h3>SNEAKER COMPANY</h3>
+          <h1>Fall Limited Edition Sneakers</h1>
+        </header>
+
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they'll withstand everything the weather can offer.
+        </p>
+
+        <div class="product__price">
+          <div class="flex-align-center">
+            <h2>$125.00</h2>
+            <span>50%</span>
+          </div>        
+          <p>$250.00</p>
+        </div>
+
+        <div class=" product__adding flex-align-center">
+
+          <div class="product__quantity flex-align-center" data-quantity-container>
+            <button data-minus>–</button>
+            <p data-quantity>0</p>
+            <button data-plus>+</button>
+          </div>
+
+          <button class="primary-btn flex-align-center"><img src="./images/icon-cart.svg" alt="icon-cart">Add to cart</button>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/GabrielXIX">Gabriel Dueñas</a>.
   </div>
 </body>
 </html>

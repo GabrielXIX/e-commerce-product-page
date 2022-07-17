@@ -1,0 +1,60 @@
+.header {
+    grid-gap: 3rem;
+    justify-content: space-between;
+    
+    margin: 0 auto 1rem auto;
+    padding: 1.5rem 0;
+    max-width: 80vw;
+
+    &--border {
+        border-bottom: 1px solid $grayish-blue;
+    }
+
+    &__item {
+        grid-gap: 3rem;
+    }
+
+    &__nav {
+        grid-gap: 2rem;    
+
+        li {
+            position: relative;
+
+            span {
+                position: absolute;
+                bottom: -2.36rem;
+                left: 0;
+                right: 0;
+    
+                margin: auto;
+                width: 10%;
+                height: 3px;
+                background-color: $primary-orange;
+                
+                transition: background-color .2s, opacity .2s, width .2s;
+                opacity: 0;             
+            }
+        }
+    }
+
+    &__profile {
+        width: 44px;
+        height: 44px;
+
+        border-radius: 50%;
+
+        &:hover {
+            outline: 2px solid $primary-orange;
+        }
+    }
+
+    &__link {
+        padding: .5rem 0;
+
+        &:hover + span {
+            width: 100%;
+
+            opacity: 1;
+        }
+    } 
+}
