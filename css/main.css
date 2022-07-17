@@ -103,6 +103,7 @@ p {
   opacity: 0;
 }
 .dropdown__btn {
+  position: relative;
   padding: 0.5rem 0;
 }
 .dropdown__btn img {
@@ -111,8 +112,7 @@ p {
 .dropdown__btn:hover > img {
   filter: brightness(0) invert(0);
 }
-.dropdown__btn::after {
-  content: "0";
+.dropdown__btn-indicator {
   position: absolute;
   top: 0.1rem;
   right: -50%;
@@ -124,7 +124,7 @@ p {
   border-radius: 8px;
   opacity: 0;
 }
-.dropdown[active] > .dropdown__btn {
+.dropdown[active] > .dropdown__btn > img {
   filter: brightness(0) invert(0);
 }
 .dropdown[active] > .dropdown__btn + .dropdown__menu {
@@ -140,6 +140,7 @@ p {
   max-height: 200px;
   padding: 1rem 1.5rem 0 1.5rem;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .dropdown__product {
   display: grid;

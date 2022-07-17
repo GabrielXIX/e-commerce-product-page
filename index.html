@@ -44,19 +44,22 @@
       
       <div class="dropdown" data-dropdown>
 
-        <button class="dropdown__btn" data-dropdown-btn><img src="./images/icon-cart.svg" alt="icon-cart" data-dropdown-btn></button>
+        <button class="dropdown__btn" data-dropdown-btn>
+          <img src="./images/icon-cart.svg" alt="icon-cart" data-dropdown-btn>
+          <div class="dropdown__btn-indicator" data-indicator>0</div>
+        </button>
 
         <div class="dropdown__menu" data-dropdown-menu>
 
           <h4 class="dropdown__title">Cart</h4>
 
-          <p class="dropdown__empty">Your cart is empty.</p>
+          <p class="dropdown__empty" data-empty>Your cart is empty.</p>
 
           <!-- <div class="dropdown__details">
             <div class="dropdown__product">
               <img class="dropdown__img" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
               <h5>Fall Limitied Edition Sneakers</h5>
-              <button class="dropdown__delete"><img src="./images/icon-delete.svg" alt="icon-delete"></button>
+              <button class="dropdown__delete" data-delete><img src="./images/icon-delete.svg" alt="icon-delete" data-delete></button>
               <p>$125 x 3</p>
               <p class="dropdown__total">$375.00</p>      
             </div>          
@@ -106,7 +109,7 @@
 
         <div class="product__price">
           <div class="flex-align-center">
-            <h2>$125.00</h2>
+            <h2 data-discount-price>$125.00</h2>
             <span>50%</span>
           </div>        
           <p>$250.00</p>
@@ -116,11 +119,11 @@
 
           <div class="product__quantity flex-align-center" data-quantity-container>
             <button data-minus>–</button>
-            <p data-quantity>0</p>
+            <p data-quantity>1</p>
             <button data-plus>+</button>
           </div>
 
-          <button class="primary-btn flex-align-center"><img src="./images/icon-cart.svg" alt="icon-cart">Add to cart</button>
+          <button class="primary-btn flex-align-center" data-add><img src="./images/icon-cart.svg" alt="icon-cart">Add to cart</button>
         </div>
 
       </div>
