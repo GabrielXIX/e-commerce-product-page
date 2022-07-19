@@ -23,6 +23,7 @@ button {
 }
 
 body {
+  position: relative;
   background-color: hsl(0deg, 0%, 100%);
   font-size: 16px;
   font-family: "Kumbh Sans", sans-serif;
@@ -32,6 +33,7 @@ body {
 img {
   max-width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
 h1 {
@@ -67,6 +69,7 @@ p {
   grid-gap: 1rem;
   justify-content: center;
   width: 100%;
+  height: 50px;
   padding: 1rem;
   background-color: hsl(26deg, 100%, 55%);
   font-size: 14px;
@@ -124,10 +127,10 @@ p {
   border-radius: 8px;
   opacity: 0;
 }
-.dropdown[active] > .dropdown__btn > img {
+.dropdown.active-dropdown > .dropdown__btn > img {
   filter: brightness(0) invert(0);
 }
-.dropdown[active] > .dropdown__btn + .dropdown__menu {
+.dropdown.active-dropdown > .dropdown__btn + .dropdown__menu {
   opacity: 1;
   transform: translate(-50%, 1rem);
   pointer-events: auto;
@@ -164,6 +167,7 @@ p {
 .dropdown__delete {
   grid-row: 1/span 2;
   grid-column: 4/span 1;
+  padding: 0.5rem 0;
 }
 .dropdown__delete img {
   height: auto;
@@ -180,6 +184,65 @@ p {
   padding: 4rem 0;
   text-align: center;
   font-weight: 700;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+.lightbox__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 550px;
+  transform: translate(-50%, -50%);
+}
+.lightbox__arrow {
+  position: absolute;
+  top: 50%;
+  padding: 1rem 1.3rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+.lightbox__arrow--previous {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.lightbox__arrow--next {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.lightbox__arrow > img {
+  transition: filter 0.2s;
+}
+.lightbox__arrow:hover > img {
+  filter: invert(52%) sepia(55%) saturate(1476%) hue-rotate(347deg) brightness(101%) contrast(101%);
+}
+.lightbox__close {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+.lightbox__close > button {
+  padding-bottom: 0.5rem;
+}
+.lightbox__close > button > img {
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+.lightbox__close > button:hover > img {
+  filter: invert(52%) sepia(55%) saturate(1476%) hue-rotate(347deg) brightness(101%) contrast(101%);
+}
+.lightbox.active-lightbox {
+  opacity: 1;
+  z-index: 100;
 }
 
 .header {
@@ -252,11 +315,19 @@ p {
   max-width: 70vw;
 }
 .product__img {
+  position: relative;
   margin-bottom: 1.5rem;
   border-radius: 24px;
 }
-.product__img img {
+.product__img-btn {
+  cursor: zoom-in;
   border-radius: 24px;
+}
+.product__img-btn img {
+  border-radius: 24px;
+}
+.product__img-btn--lightbox {
+  cursor: default;
 }
 .product__thumbnails {
   display: flex;
@@ -265,6 +336,10 @@ p {
 }
 .product__thumbnails img {
   border-radius: 12px;
+}
+.product__thumbnails--lightbox {
+  width: 75%;
+  margin: auto;
 }
 .product__thumbnail {
   position: relative;
@@ -282,13 +357,13 @@ p {
   border-radius: 12px;
   opacity: 0;
 }
-.product__thumbnail:not([active]):hover::after {
+.product__thumbnail:not(.active-thumbnail):hover::after {
   opacity: 0.5;
 }
-.product__thumbnail[active] {
+.product__thumbnail.active-thumbnail {
   outline: 3px solid hsl(26deg, 100%, 55%);
 }
-.product__thumbnail[active]::after {
+.product__thumbnail.active-thumbnail::after {
   opacity: 0.7;
 }
 .product__details {
@@ -317,19 +392,23 @@ p {
   grid-gap: 1rem;
 }
 .product__quantity {
-  grid-gap: 2rem;
-  padding: 0.45rem 0.8rem;
+  grid-gap: 1.6rem;
+  height: 50px;
+  padding: 0 0.5rem;
   background-color: hsl(223deg, 64%, 98%);
   border-radius: 12px;
 }
 .product__quantity button {
-  padding: 0.5rem;
-  color: hsl(26deg, 100%, 55%);
-  font-weight: 700;
-  transition: color 0.2s;
+  width: 30px;
+  padding: 0.6rem;
+  transition: filter 0.2s;
 }
 .product__quantity button:hover {
-  color: rgba(255, 125, 26, 0.5);
+  filter: brightness(150%);
+}
+.product__quantity button img {
+  width: 100%;
+  height: auto;
 }
 .product__quantity p {
   width: 20px;

@@ -9,13 +9,25 @@
     max-width: 70vw;
 
     &__img {
+        position: relative;
+
         margin-bottom: 1.5rem;
 
         border-radius: 24px;
 
-        img {
+        &-btn {
+            cursor: zoom-in;
+
             border-radius: 24px;
-        }
+
+            img {
+                border-radius: 24px;
+            }
+
+            &--lightbox {
+                cursor: default;
+            }
+        }      
     }
 
 
@@ -27,6 +39,11 @@
 
         img {
             border-radius: 12px;
+        }
+
+        &--lightbox {
+            width: 75%;
+            margin: auto;
         }
     }
 
@@ -50,11 +67,11 @@
             opacity: 0;
         }
 
-        &:not([active]):hover::after {
+        &:not(.active-thumbnail):hover::after {
             opacity: .5;
         } 
 
-        &[active] {
+        &.active-thumbnail {
             outline: 3px solid $primary-orange;
 
             &::after {
@@ -100,23 +117,28 @@
     }
 
     &__quantity {
-        grid-gap: 2rem;
+        grid-gap: 1.6rem;
 
-        padding: .45rem .8rem;
+        height: 50px;
+        padding: 0 .5rem;
+       
         background-color: $light-grayish-blue;
 
         border-radius: 12px;
 
         button {
-            padding: .5rem;
+            width: 30px;
+            padding: .6rem;
 
-            color: $primary-orange;
-            font-weight: 700;
-
-            transition: color .2s;
+            transition: filter .2s;
 
             &:hover {
-                color: rgba($primary-orange, 0.5);
+                filter: brightness(150%);
+            }
+
+            img {
+                width: 100%;
+                height: auto; 
             }
         }
 

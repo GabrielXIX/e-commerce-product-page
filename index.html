@@ -45,7 +45,7 @@
       <div class="dropdown" data-dropdown>
 
         <button class="dropdown__btn" data-dropdown-btn>
-          <img src="./images/icon-cart.svg" alt="icon-cart" data-dropdown-btn>
+          <img src="./images/icon-cart.svg" alt="icon-cart">
           <div class="dropdown__btn-indicator" data-indicator>0</div>
         </button>
 
@@ -55,19 +55,21 @@
 
           <p class="dropdown__empty" data-empty>Your cart is empty.</p>
 
-          <!-- <div class="dropdown__details">
-            <div class="dropdown__product">
+          <!-- 
+          Product template
+          <div class="dropdown__details">
+            <div class="dropdown__product" data-product>
               <img class="dropdown__img" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
               <h5>Fall Limitied Edition Sneakers</h5>
               <button class="dropdown__delete" data-delete><img src="./images/icon-delete.svg" alt="icon-delete" data-delete></button>
               <p>$125 x 3</p>
               <p class="dropdown__total">$375.00</p>      
             </div>          
-          </div>   
-          
+          </div>        
           <div class="dropdown__checkout">
             <button class="primary-btn primary-btn--cart">Checkout</button>
-          </div> -->
+          </div> 
+          -->
 
         </div>      
       </div>
@@ -86,10 +88,10 @@
 
       <div>
         <div class="product__img" data-product-img>
-          <img src="./images/image-product-1.jpg" alt="image-product-1">
+          <button class="product__img-btn" data-open-lightbox><img src="./images/image-product-1.jpg" alt="image-product-1"></button>
         </div>
         <div class="product__thumbnails" data-thumbnail-container>
-          <button class="product__thumbnail" data-thumbnail active><img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail"></button>
+          <button class="product__thumbnail active-thumbnail" data-thumbnail><img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail"></button>
           <button class="product__thumbnail" data-thumbnail><img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail"></button>
           <button class="product__thumbnail" data-thumbnail><img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail"></button>
           <button class="product__thumbnail" data-thumbnail><img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail"></button>
@@ -99,7 +101,7 @@
       <div class="product__details">
         <header class="product__header">
           <h3>SNEAKER COMPANY</h3>
-          <h1>Fall Limited Edition Sneakers</h1>
+          <h1 data-name>Fall Limited Edition Sneakers</h1>
         </header>
 
         <p>
@@ -118,9 +120,9 @@
         <div class=" product__adding flex-align-center">
 
           <div class="product__quantity flex-align-center" data-quantity-container>
-            <button data-minus>–</button>
+            <button class="flex-align-center" data-minus><img class="hola" src="./images/icon-minus.svg" alt="icon-minus"></button>
             <p data-quantity>1</p>
-            <button data-plus>+</button>
+            <button class="flex-align-center" data-plus><img src="./images/icon-plus.svg" alt="icon-plus"></button>
           </div>
 
           <button class="primary-btn flex-align-center" data-add><img src="./images/icon-cart.svg" alt="icon-cart">Add to cart</button>
@@ -137,5 +139,30 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/GabrielXIX">Gabriel Dueñas</a>.
   </div>
+
+  <div class="lightbox" data-lightbox-container>
+
+    <div class="lightbox__inner" data-lightbox>
+
+      <div class="lightbox__close">
+        <button data-close><img src="./images/icon-close.svg" alt="icon-close" data-close></button>
+      </div>
+
+      <div class="product__img" data-product-img-lightbox>
+        <img class="product__img-btn product__img-btn--lightbox" src="./images/image-product-1.jpg" alt="image-product-1">
+        
+        <button class="lightbox__arrow lightbox__arrow--previous" data-previous><img src="./images/icon-previous.svg" alt="icon-previous" data-previous></button>
+        <button class="lightbox__arrow lightbox__arrow--next" data-next><img src="./images/icon-next.svg" alt="icon-next" data-next></button>
+      </div>
+      <div class="product__thumbnails product__thumbnails--lightbox">
+        <button class="product__thumbnail active-thumbnail" data-thumbnail-lightbox><img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail"></button>
+        <button class="product__thumbnail" data-thumbnail-lightbox><img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail"></button>
+        <button class="product__thumbnail" data-thumbnail-lightbox><img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail"></button>
+        <button class="product__thumbnail" data-thumbnail-lightbox><img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail"></button>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>
