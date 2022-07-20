@@ -29,6 +29,10 @@
             &--lightbox {
                 cursor: default;
             }
+
+            @include media-tablet-sm {
+                display: none;
+            }
         }      
 
         @include media-tablet-sm {
@@ -38,14 +42,36 @@
 
             border-radius: 0;
 
-            &-btn > img {
+            &-btn {
+                cursor: default;
+
+                & > img {
+
+                    width: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+    
+                    border-radius: 0;
+                }
+            } 
+        }
+
+        @include media-phone-sm {
+            height: 300px;
+
+        }
+
+        &-mobile {
+            display: none;
+
+            @include media-tablet-sm {
+                display: block;
 
                 width: 100%;
                 max-height: 100%;
                 object-fit: cover;
                 object-position: center;
-
-                border-radius: 0;
             }
         }
     }

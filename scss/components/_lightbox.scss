@@ -39,6 +39,7 @@
         }
         &--next {
             right: 0;
+            
             transform: translate(50%, -50%);
         }
         
@@ -76,5 +77,26 @@
     &.active-lightbox {
         opacity: 1;
         z-index: 100;
+    }
+}
+
+.mobile-arrow {
+    display: none;
+    padding: .7rem 1rem;
+
+    img {
+        width: 10px;
+    }
+
+    &__left {
+        transform: translate(30%, -50%);
+    }
+
+    &__right {
+        transform: translate(-30%, -50%);
+    }
+
+    @include media-tablet-sm {
+        display: block;
     }
 }

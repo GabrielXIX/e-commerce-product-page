@@ -229,6 +229,7 @@ dropdownMenu.addEventListener("click", e => {
     }
 });
 
+//Mobile menu opening and closing
 openMenu.addEventListener("click", () => {
 
     mobileMenuContainer.classList.add("active-menu");
@@ -240,6 +241,35 @@ mobileMenuContainer.addEventListener("click", e => {
         mobileMenuContainer.classList.remove("active-menu");
     }
 });
+
+//Mobile product image change
+productImgs[0].addEventListener("click", e => {
+    const mobileImg = document.querySelector("[data-product-img-mobile]");
+    let imgNum = mobileImg.src.substring(mobileImg.src.length - 5, mobileImg.src.length - 4);
+
+    if(e.target.matches("[data-previous]")) {
+
+        if(imgNum == "1") {
+
+            mobileImg.src = "./images/image-product-4.jpg";
+        }
+        else {
+
+            mobileImg.src = "./images/image-product-" + (parseInt(imgNum) - 1).toString() + ".jpg";
+        }
+    }
+    else if(e.target.matches("[data-next]")) {
+
+        if(imgNum == "4") {
+
+            mobileImg.src = "./images/image-product-1.jpg";
+        }
+        else {
+
+            mobileImg.src = "./images/image-product-" + (parseInt(imgNum) + 1).toString() + ".jpg";
+        }
+    }
+})
 
 //UTILITY FUNCTIONS
 
