@@ -23,13 +23,17 @@
   <header class="header header--border flex-align-center">
 
     <div class="header__item flex-align-center">
+      <button class="mobile-menu__btn" data-open-menu>
+        <img src="./images/icon-menu.svg" alt="icon-menu">
+      </button>
 
       <div>
         <a class="header__link" href="#"><img src="./images/logo.svg" alt="sneakers-logo"></a>
       </div>
 
-      <nav>
-        <ul role="list" class="header__nav flex-align-center">
+      <nav class="mobile-menu__nav" data-menu>
+        <ul role="list" class="header__nav flex-align-center" data-menu-inner>
+          <li class="mobile-menu__close"><button data-close-menu><img src="./images/icon-close.svg" alt="icon-close"></button></li>
           <li><a href="#" class="header__link">Collections</a><span></span></li>
           <li><a href="#" class="header__link">Men</a><span></span></li>
           <li><a href="#" class="header__link">Women</a><span></span></li>
@@ -125,7 +129,7 @@
             <button class="flex-align-center" data-plus><img src="./images/icon-plus.svg" alt="icon-plus"></button>
           </div>
 
-          <button class="primary-btn flex-align-center" data-add><img src="./images/icon-cart.svg" alt="icon-cart">Add to cart</button>
+          <button class="primary-btn flex-align-center media-adjust" data-add><img src="./images/icon-cart.svg" alt="icon-cart">Add to cart</button>
         </div>
 
       </div>

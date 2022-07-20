@@ -1,0 +1,55 @@
+.mobile-menu {
+
+    &__btn {
+
+        display: none;
+        padding: 0 .5rem;
+
+        @include media-tablet-sm {
+            display: inline-block;
+        }
+    }
+
+    &__nav {
+
+        @include media-tablet-sm {
+            //display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 40;
+
+            width: 100%;
+            background-color: rgba($black, .75);
+
+            transform: translateX(-100%);
+            transition: opacity .3s;
+            opacity: 1;
+        } 
+
+        &.active-menu {
+            opacity: 1;
+            transform: translateX(0);
+
+            & > .header__nav {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &__close {
+        display: none;
+
+        margin-bottom: 2rem;
+        width: 100%;
+
+        button {
+            padding: .5rem 0;
+        }
+
+        @include media-tablet-sm {
+            display: block;
+        }
+    }
+}

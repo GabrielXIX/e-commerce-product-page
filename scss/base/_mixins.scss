@@ -1,0 +1,29 @@
+@mixin media-tablet-lg {
+    @media (max-width: $media-tablet-lg) {
+        @content;
+    }
+}
+
+@mixin media-tablet-md {
+    @media (max-width: $media-tablet-md) {
+        @content;
+    }
+}
+
+@mixin media-tablet-sm {
+    @media (max-width: $media-tablet-sm) {
+        @content;
+    }
+}
+
+@mixin media-phone-md {
+    @media (max-width: $media-phone-md) {
+        @content;
+    }
+}
+
+@mixin media-phone-sm {
+    @media (max-width: $media-phone-sm) {
+        @content;
+    }
+}

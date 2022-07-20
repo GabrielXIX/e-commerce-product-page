@@ -30,3 +30,14 @@
         box-shadow: none;
     }
 }
+
+.media-adjust {
+
+    @include media-tablet-sm {
+        width: 250px;
+    }
+
+    @include media-phone-md {
+        width: 100%;
+    }
+}

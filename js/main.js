@@ -41,6 +41,11 @@ discountPrice = parseInt(discountPrice.substring(1));
 //Dropdown
 const dropdownMenu = document.querySelector('[data-dropdown-menu]');
 
+//Mobile menu 
+const mobileMenuContainer = document.querySelector("[data-menu]");
+//const mobileMenu = document.querySelector("[data-menu-inner]");
+const openMenu = document.querySelector("[data-open-menu]");
+
 //EVENT LISTENERS
 
 //Main thumbnail change event listener
@@ -221,6 +226,18 @@ dropdownMenu.addEventListener("click", e => {
             //Update indicator
             amountIndicator.style.opacity = 0;
         }  
+    }
+});
+
+openMenu.addEventListener("click", () => {
+
+    mobileMenuContainer.classList.add("active-menu");
+});
+
+mobileMenuContainer.addEventListener("click", e => {
+
+    if(e.target.matches("[data-menu]") || e.target.matches("[data-close-menu]")) {
+        mobileMenuContainer.classList.remove("active-menu");
     }
 });
 

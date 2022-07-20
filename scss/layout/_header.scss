@@ -1,5 +1,4 @@
 .header {
-    grid-gap: 3rem;
     justify-content: space-between;
     
     margin: 0 auto 1rem auto;
@@ -8,10 +7,19 @@
 
     &--border {
         border-bottom: 1px solid $grayish-blue;
+
+        @include media-tablet-sm {
+            border-bottom: none;
+        }
     }
 
     &__item {
         grid-gap: 3rem;
+
+        @include media-tablet-lg {
+
+            grid-gap: 1rem;
+        }
     }
 
     &__nav {
@@ -32,9 +40,33 @@
                 background-color: $primary-orange;
                 
                 transition: background-color .2s, opacity .2s, width .2s;
-                opacity: 0;             
+                opacity: 0;    
+                
+                @include media-tablet-sm {
+                    bottom: -.2rem;
+                }
             }
         }
+
+        @include media-tablet-lg {
+
+            grid-gap: 1.5rem;
+        }
+
+        @include media-tablet-sm {
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            width: 60%;
+            height: 100%;
+            padding: 2rem;
+            background-color: $white;
+
+            transition: transform .3s;
+            transform: translateX(-100%);
+        } 
     }
 
     &__profile {
@@ -46,6 +78,11 @@
         &:hover {
             outline: 2px solid $primary-orange;
         }
+
+        img {
+            width: 100%;
+            max-height: 100%;
+        }
     }
 
     &__link {
@@ -55,6 +92,25 @@
             width: 100%;
 
             opacity: 1;
+        }  
+
+        @include media-tablet-sm {
+            color: $black;
+            font-weight: 700;
         }
     } 
+
+    @include media-tablet-lg {
+        grid-gap: 1.5rem;
+    }
+
+    @include media-tablet-md {
+        max-width: 90vw;
+    }
+
+    @include media-tablet-sm {
+        max-width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
 }

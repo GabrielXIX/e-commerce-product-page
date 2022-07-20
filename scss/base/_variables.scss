@@ -8,4 +8,10 @@ $dark-grayish-blue: hsl(219, 9%, 45%);
 $grayish-blue: hsl(220, 14%, 75%);
 $light-grayish-blue: hsl(223, 64%, 98%);
 $white: hsl(0, 0%, 100%);
-$black: hsl(0, 0%, 0%); //with 75% opacity for lightbox background
+$black: hsl(0, 0%, 0%);
+
+$media-tablet-lg: 1200px;
+$media-tablet-md: 964px;
+$media-tablet-sm: 780px;
+$media-phone-md: 560px;
+$media-phone-sm: 440px;
