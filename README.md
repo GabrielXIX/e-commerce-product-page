@@ -32,9 +32,9 @@ Users should be able to:
 
 ![image](https://user-images.githubusercontent.com/65438145/180104016-255a4e7e-aa19-4488-a917-3bd42c04acab.png)
 ![image](https://user-images.githubusercontent.com/65438145/180104285-e76eba95-25a5-41c1-8cd0-31ebf3d66d7b.png)
-<img src="https://user-images.githubusercontent.com/65438145/180104120-3e4182d6-0f1c-41a5-abe5-9c43ee165e99.png"  width="280">
-<img src="https://user-images.githubusercontent.com/65438145/180104237-838d43a8-0c0f-42c6-a362-cf34be6163b7.png"  width="280">
-<img src="https://user-images.githubusercontent.com/65438145/180104254-ffa6fb7d-878c-461e-800f-e578ad432136.png"  width="280">
+<img src="https://user-images.githubusercontent.com/65438145/180104120-3e4182d6-0f1c-41a5-abe5-9c43ee165e99.png"  width="270">
+<img src="https://user-images.githubusercontent.com/65438145/180104237-838d43a8-0c0f-42c6-a362-cf34be6163b7.png"  width="270">
+<img src="https://user-images.githubusercontent.com/65438145/180104254-ffa6fb7d-878c-461e-800f-e578ad432136.png"  width="270">
 
 ### Links
 
