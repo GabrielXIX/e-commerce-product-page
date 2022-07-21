@@ -1,3 +1,5 @@
+//ELEMENTS AND VARIABLES
+
 //Main thumbnail elements
 const thumbnailContainer = document.querySelector("[data-thumbnail-container]");
 const openLightbox = document.querySelector("[data-open-lightbox]");
@@ -43,7 +45,6 @@ const dropdownMenu = document.querySelector('[data-dropdown-menu]');
 
 //Mobile menu 
 const mobileMenuContainer = document.querySelector("[data-menu]");
-//const mobileMenu = document.querySelector("[data-menu-inner]");
 const openMenu = document.querySelector("[data-open-menu]");
 
 //EVENT LISTENERS

@@ -1,3 +1,4 @@
+//Media querie mixins
 @mixin media-tablet-lg {
     @media (max-width: $media-tablet-lg) {
         @content;

@@ -49,12 +49,10 @@
         }
 
         @include media-tablet-lg {
-
             grid-gap: 1.5rem;
         }
 
         @include media-tablet-sm {
-
             display: flex;
             flex-direction: column;
             align-items: flex-start;

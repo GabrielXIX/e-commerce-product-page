@@ -16,17 +16,16 @@
         border-radius: 12px;
         opacity: 0;
 
-        @include media-tablet-md {
-            
-            transform: translateX(-78%);
+        @include media-tablet-md {        
             left: 100%;
+            transform: translateX(-78%);
         }
 
         @include media-phone-xsm {
-
             top: 70px;
             left: 10px;
             right: 10px;
+
             width: auto;
             
             transform: translateX(0);
@@ -35,6 +34,7 @@
 
     &__btn {
         position: relative;
+
         padding: .5rem 0;
 
         img {
@@ -86,7 +86,6 @@
 
     &__title {
         padding: 1rem 1.5rem;
-
         border-bottom: 1px solid $grayish-blue;
     }
 

@@ -1,9 +1,10 @@
 *,
 *::before,
 *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
     font-size: inherit;
 }
 
@@ -14,10 +15,6 @@ ul {
 a {
     text-decoration: none;
     color: $dark-grayish-blue;
-
-    // &:visited {
-    //     color: $grayish-blue;
-    // }
 }
 
 button {
